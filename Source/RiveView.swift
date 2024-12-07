@@ -356,7 +356,7 @@ open class RiveView: RiveRendererView {
             }
         }
         
-        if !isPlaying {
+        if !isPlaying && delta != 0 {
             stopTimer()
             
             // This will be true when coming to a hault automatically
