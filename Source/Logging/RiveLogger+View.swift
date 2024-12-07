@@ -73,7 +73,7 @@ extension RiveLogger {
         case .drawing(let size):
             guard isVerbose else { return }
             _log(event: event, level: .debug) {
-                Self.view.debug("\(self.prefix(for: view))Drawing size {\(size.width),\(size.height)}")
+                Self.view.debug("\(self.prefix(for: view))YJS {\(size.width),\(size.height)}")
             }
         case .error(let message):
             _log(event: event, level: .error) {
