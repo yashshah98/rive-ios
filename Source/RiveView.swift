@@ -356,11 +356,10 @@ open class RiveView: RiveRendererView {
             }
         }
 
-        RiveLogger.log(view: self, event: .error("YJS: isPlaying \(isPlaying)"))
-        RiveLogger.log(view: self, event: .error("YJS: delta \(delta)"))
+        RiveLogger.log(view: self, event: .pause)
         
         if !isPlaying && delta > 0 {
-            RiveLogger.log(view: self, event: .error("YJS: stopped"))
+            RiveLogger.log(view: self, event: .stop)
             stopTimer()
             
             // This will be true when coming to a hault automatically
