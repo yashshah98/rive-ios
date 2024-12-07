@@ -329,6 +329,7 @@ open class RiveView: RiveRendererView {
     ///
     /// - Parameter delta: elapsed seconds since the last advance
     @objc open func advance(delta: Double) {
+        RiveLogger.log(view: self, event: .error("YJS: delta \(delta)"))
         let wasPlaying = isPlaying
         eventQueue.fireAll()
         
