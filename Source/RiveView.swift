@@ -355,21 +355,18 @@ open class RiveView: RiveRendererView {
                 }
             }
         }
-
-        RiveLogger.log(view: self, event: .pause)
         
         if !isPlaying && delta > 0 {
-            RiveLogger.log(view: self, event: .stop)
             stopTimer()
             
             // This will be true when coming to a hault automatically
             if wasPlaying {
-                RiveLogger.log(view: self, event: .pause)
+                RiveLogger.log(view: self, event: .play)
                 playerDelegate?.player(pausedWithModel: riveModel)
             }
         }
         
-        RiveLogger.log(view: self, event: .advance(delta))
+        // RiveLogger.log(view: self, event: .advance(delta))
         playerDelegate?.player(didAdvanceby: delta, riveModel: riveModel)
         
         // Trigger a redraw
