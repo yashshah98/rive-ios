@@ -92,7 +92,6 @@ open class RiveView: RiveRendererView {
     }
 
     private func commonInit() {
-        fatalError()
         #if os(iOS)
         if #available(iOS 17, *) {
             registerForTraitChanges([UITraitHorizontalSizeClass.self, UITraitVerticalSizeClass.self]) { [weak self] (_: UITraitEnvironment, traitCollection: UITraitCollection) in
@@ -214,6 +213,7 @@ open class RiveView: RiveRendererView {
     
     /// Starts the render loop
     internal func play() {
+        fatalError()
         RiveLogger.log(view: self, event: .play)
 
         eventQueue.add {
@@ -226,6 +226,7 @@ open class RiveView: RiveRendererView {
     
     /// Asks the render loop to stop on the next cycle
     internal func pause() {
+        fatalError()
         RiveLogger.log(view: self, event: .pause)
 
         if isPlaying {
