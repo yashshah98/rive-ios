@@ -355,8 +355,12 @@ open class RiveView: RiveRendererView {
                 }
             }
         }
+
+        print("YJS: isPlaying \(isPlaying)")
+        print("YJS: delta \(delta))
         
-        if !isPlaying && delta != 0 {
+        if !isPlaying && delta > 0 {
+            print("YJS: stopped")
             stopTimer()
             
             // This will be true when coming to a hault automatically
