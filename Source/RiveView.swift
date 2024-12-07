@@ -92,6 +92,7 @@ open class RiveView: RiveRendererView {
     }
 
     private func commonInit() {
+        fatalError()
         #if os(iOS)
         if #available(iOS 17, *) {
             registerForTraitChanges([UITraitHorizontalSizeClass.self, UITraitVerticalSizeClass.self]) { [weak self] (_: UITraitEnvironment, traitCollection: UITraitCollection) in
